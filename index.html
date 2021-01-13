@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  
+  <!----------------------------------------------------------------------- Modal --------------------------------------------------------->
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class=" modal-content-container">
+        <div class="modal-body modal-body-container">
+        <h5 class="modal-title modal-title-container edit-h5 " id="exampleModalLabel">Please add the quantity of the item you have selected</h5>
+          <div class="box">
+            <p id="color-modal"></p>
+            <div class="box-cal">
+                <i class="fa fa-minus-circle" id="minus" onclick="remove()"></i>
+                <p id="number"></p>
+                <i class="fa fa-plus-circle" id="plus" onclick="add()"></i>
+            </div>
+          </div>
+          <div class="btn-container">
+            <button type="button" class="btn-cus btn-agree" data-bs-dismiss="modal" onclick="agree(event)">Agree</button>
+            <button type="button" class="btn-cus btn-cancle" data-bs-dismiss="modal" onclick="cancel()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------------------------------------------------------------------------------------------- -->
+  </div>
+    <div class="container mt-5">
+        <div class="row"> 
+            <h1 class="Rationell-Bold main-tittle">HICKIES Originals</h1>
+        </div>
+        <div class="row mb-2">
+            <div class=" mx-3">
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+                <span class="mx-5 grey">1,293 reviews</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="">
+                <span class="me-5 price Rationell-Bold">&#36;14.99</span>
+                <span class="ms-2 me-4 grey">&#36;17.99</span>
+                <span class="ms-4 grey">25&#37 OFF</span>
+            </div>
+        </div>
+        <div class="row ms-1">
+            <p class="">ONLINE EXCLUSIVE</p>
+        </div>
+        <div class="row">
+            <p  class="Rationell-Bold mb-3 small ">COLOR: <span class="" id="color"></span></p>
+        </div>
+        <div class="row mb-2 ">
+            <div class="col-lg-6 col-md-9">
+                <div class="inline-block me-3" ><div class="color Electric-Red" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Blue" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Black" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color White" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Orange" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Yellow" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Dark-Blue" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Navy" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Beige" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Light-Blue" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3" ><div class="color Light-Green" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3"><div class="color Fuchsia" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3"><div class="color Beige" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3"><div class="color Dark-Green" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3"><div class="color Dark-Grey" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3"><div class="color Dark-Brown" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3"><div class="color Pale-Turquoise" onclick="unselect(event)"></div></div>
+                <div class="inline-block me-3"><div class="color Light-Gray" onclick="unselect(event)"></div></div>
+            </div>
+        </div>
+        <div class="row">
+            <p class="Rationell-Bold small">Size Guide</p>
+        </div>
+        <div class="row">
+            <p class="Rationell-Bold small">Your Custom Fit</p>
+        </div>
+        <div class="row mb-4">
+            <div class="flex">
+                <p class="counter" id="items"></p>
+                <button class="custom-btn " id="cart" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add to Cart</button>
+        </div>
+            </div>
+        <div class="row mb-5">
+            <div class="line"></div>
+        </div>
+        <div class="row mb-4 ms-1">
+            <p class="Rationell-Bold small">DETAILS</p>
+            <div id="add"></div>
+        </div>
+        <div class="row mb-3">
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <p class="Rationell-Bold small">Need Help&#63</p>
+        </div>
+        <div class="row">
+            <p class="Rationell-Bold small">Shipping &#38 Returns</p>
+        </div>
+        <div class="row mb-5">
+            <div class="Double-line"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

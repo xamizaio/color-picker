@@ -1,0 +1,258 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@font-face {
+    font-family: Rationell-Bold;
+    src: url(./fonts/Rationell-Bold.otf);
+ }
+ @font-face {
+    font-family: Rationell-Regular;
+    src: url(./fonts/Rationell-Regular.otf);
+ }
+*{
+    font-family: Rationell-Regular;
+
+}
+
+.Rationell-Bold{
+    font-family: 'Rationell-Bold',Arial ;
+}
+.main-tittle{
+    font-size: 2.5em;
+}
+.price{
+    font-size: 1.7em;
+    color: #d87386;
+}
+.grey{
+    color: #c7c7c7;
+}
+.checked {
+    color: orange;
+  }
+.dollar:before {
+    content: '$';
+}
+.color{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.inline-block{
+    display: inline-block;
+}
+.flex{
+    display: flex;
+}
+.counter{
+    border: 1px solid;
+    padding: 10px 2vw;
+    border-radius: 25px;
+    margin-right: 20px;
+}
+.custom-btn{
+    outline:none;
+    padding: 0px 8vw;
+    border-radius: 25px;
+    margin-right: 20px;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+.custom-btn:focus {
+    outline: 0;
+    }
+.margin{
+    margin-right:10px
+}
+
+.selected{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    padding: 4px 4px;
+    display: inline-block;
+    border: 1px solid;
+}
+.Electric-Red{
+    background-color: brown;
+}
+.Blue{
+    background-color: blue;
+}
+.Black{
+    background-color: black;
+}
+.White{
+    background-color: white;
+}
+.Orange{
+    background-color:Chocolate;
+}
+.Yellow{
+    background-color: yellow;
+}
+.Dark-Blue{
+    background-color:DarkBlue;
+}
+.Navy{
+    background-color:#1f4763;
+}
+.Beige{
+    background-color:BurlyWood;
+}
+.Light-Blue{
+    background-color:LightBlue;
+}
+.Light-Green{
+    background-color:LightGreen;
+}
+.Fuchsia{
+    background-color:Fuchsia;
+}
+.Beige{
+    background-color:BurlyWood;
+}
+.Dark-Green{
+    background-color:DarkGreen;
+}
+.Dark-Grey{
+    background-color:DarkGrey;
+}
+.Dark-Brown{
+    background-color:#695027;
+}
+.Pale-Turquoise{
+    background-color:PaleTurquoise;
+}
+.Light-Gray{
+    background-color:LightGray;
+}
+.line{
+    border-bottom: 1px solid black;
+}
+.Double-line{
+    border-bottom: 5px solid black;
+}
+.modal-content-container{
+    width: 415px;
+    height: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.modal-body-container{
+    border: 1px solid;
+    margin: 5px;
+    padding-left: 35px;
+}
+.modal-title-container{
+    font-size: 0.75em;
+    margin-bottom: 35px;
+}
+.edit-h5{
+    margin-left: 2vw;
+}
+.box{
+    display: flex;
+    padding: 35px;
+}
+#color-modal{
+    flex: 0 0 26%;
+    font-size: 0.75em;
+    margin: auto 25px;
+}
+#minus{
+    margin-right: 20px;
+    font-size: 4.25em;
+    color: black;
+}
+#plus{
+    margin-left: 20px;
+    font-size: 4.25em;
+    color: black;
+}
+#number{
+    margin-top: 15px;
+    font-size: 2em;
+}
+.box-cal{
+    display: flex;
+}
+.btn-agree{
+    background-color: #c4e4c4;
+}
+.btn-cus{
+    color: black;
+    border: none;
+    /* padding: 0px 140px; */
+    margin-right: 10px;
+    height: 35px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-cancle{
+    background-color: #ffdada;
+}
+.btn-container{
+    display: flex;
+    justify-content: flex-end;
+}
+@media only screen and (max-width: 800px){
+    .custom-btn{
+        padding: 0px 12vw;
+    }
+    .counter{
+        padding: 10px 3vw;
+    }
+}
+@media only screen and (max-width: 500px){
+    .custom-btn{
+        padding: 0px 19vw;
+    }
+    .counter{
+        padding: 10px 7vw;
+    }
+    .modal-content-container{
+        width: 350px;
+        height: 215px
+    }
+    .modal-title-container{
+        font-size: 0.65em;
+    }
+    .box{
+        padding: 25px;
+    }
+    #color-modal{
+        font-size: 0.65em;
+        margin: auto 20px;
+    }
+    #number{
+        margin-top: 8px;
+    }
+    #plus{
+        font-size: 3.5em;
+    }
+    #minus{
+        font-size: 3.5em;
+    }
+    .main-tittle{
+        font-size: 2.3em;
+    }
+}
